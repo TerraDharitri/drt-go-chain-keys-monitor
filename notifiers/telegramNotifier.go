@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	httpSDK "github.com/multiversx/mx-sdk-go/core/http"
+	httpSDK "github.com/TerraDharitri/drt-go-sdk/core/http"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 type telegramNotifier struct {

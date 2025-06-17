@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	logger "github.com/multiversx/mx-chain-logger-go"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -327,7 +327,7 @@ func TestTelegramNotifier_FunctionalTest(t *testing.T) {
 			IdentifierType:     "BLS key",
 			Identifier:         "0295e29aef11c30391a70c3578d3c3dea23da84b2465fe8bbb17cbf2d4e87ca4e416a32626f2c51e1f125054ed8720077df8daa475857a35129e8772a39112c252e67dd783acb83f6fffc70dd8a7830e599995ac4c7dd35f08664c479f7fde80",
 			ShortIdentifier:    "0295e2...7fde80",
-			IdentifierURL:      "https://testnet-explorer.multiversx.com/nodes/0295e29aef11c30391a70c3578d3c3dea23da84b2465fe8bbb17cbf2d4e87ca4e416a32626f2c51e1f125054ed8720077df8daa475857a35129e8772a39112c252e67dd783acb83f6fffc70dd8a7830e599995ac4c7dd35f08664c479f7fde80",
+			IdentifierURL:      "https://testnet-explorer.dharitri.org/nodes/0295e29aef11c30391a70c3578d3c3dea23da84b2465fe8bbb17cbf2d4e87ca4e416a32626f2c51e1f125054ed8720077df8daa475857a35129e8772a39112c252e67dd783acb83f6fffc70dd8a7830e599995ac4c7dd35f08664c479f7fde80",
 			ExecutorName:       "testnet - set 1",
 			ProblemEncountered: "Rating drop detected: temp rating: 90.70, rating: 100.00",
 		}

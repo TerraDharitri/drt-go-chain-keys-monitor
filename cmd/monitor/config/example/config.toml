@@ -60,24 +60,24 @@
 #[[BLSKeysMonitoring]]
 #    AlarmDeltaRatingDrop = 1.0 # maximum Rating-TempRating value that will trigger an alarm
 #    Name = "Mainnet"
-#    ApiURL = "https://api.multiversx.com"
-#    ExplorerURL = "https://explorer.multiversx.com"
+#    ApiURL = "https://api.dharitri.org"
+#    ExplorerURL = "https://explorer.dharitri.org"
 #    PollingIntervalInSeconds = 300  # 5 minutes
 #    ListFile = "./config/mainnet.list"
 #
 #[[BLSKeysMonitoring]]
 #    AlarmDeltaRatingDrop = 3.0 # maximum Rating-TempRating value that will trigger an alarm
 #    Name = "Testnet"
-#    ApiURL = "https://testnet-api.multiversx.com"
-#    ExplorerURL = "https://testnet-explorer.multiversx.com"
+#    ApiURL = "https://testnet-api.dharitri.org"
+#    ExplorerURL = "https://testnet-explorer.dharitri.org"
 #    PollingIntervalInSeconds = 300  # 5 minutes
 #    ListFile = "./config/testnet.list"
 #
 #[[BLSKeysMonitoring]]
 #    AlarmDeltaRatingDrop = 1.0 # maximum Rating-TempRating value that will trigger an alarm
 #    Name = "Devnet"
-#    ApiURL = "https://devnet-api.multiversx.com"
-#    ExplorerURL = "https://devnet-explorer.multiversx.com"
+#    ApiURL = "https://devnet-api.dharitri.org"
+#    ExplorerURL = "https://devnet-explorer.dharitri.org"
 #    PollingIntervalInSeconds = 300  # 5 minutes
 #    ListFile = "./config/devnet.list"
 #

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	logger "github.com/multiversx/mx-chain-logger-go"
-	httpSDK "github.com/multiversx/mx-sdk-go/core/http"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
+	httpSDK "github.com/TerraDharitri/drt-go-sdk/core/http"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 const (

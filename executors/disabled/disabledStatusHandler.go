@@ -3,7 +3,7 @@ package disabled
 import (
 	"context"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 type disabledStatusHandler struct {

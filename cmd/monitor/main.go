@@ -9,14 +9,14 @@ import (
 	"syscall"
 	"time"
 
-	mxCore "github.com/multiversx/mx-chain-core-go/core"
-	"github.com/multiversx/mx-chain-core-go/core/check"
-	"github.com/multiversx/mx-chain-keys-monitor-go/config"
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors"
-	"github.com/multiversx/mx-chain-keys-monitor-go/factory"
-	logger "github.com/multiversx/mx-chain-logger-go"
-	"github.com/multiversx/mx-chain-logger-go/file"
+	drtCore "github.com/TerraDharitri/drt-go-chain-core/core"
+	"github.com/TerraDharitri/drt-go-chain-core/core/check"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/config"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/factory"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
+	"github.com/TerraDharitri/drt-go-chain-logger/file"
 	"github.com/pelletier/go-toml"
 	"github.com/urfave/cli"
 )
@@ -64,12 +64,12 @@ func main() {
 
 	app := cli.NewApp()
 	cli.AppHelpTemplate = nodeHelpTemplate
-	app.Name = "MultiversX keys monitor tool"
-	machineID := mxCore.GetAnonymizedMachineID(app.Name)
+	app.Name = "Dharitri keys monitor tool"
+	machineID := drtCore.GetAnonymizedMachineID(app.Name)
 
 	baseVersion := fmt.Sprintf("%s/%s/%s-%s", appVersion, runtime.Version(), runtime.GOOS, runtime.GOARCH)
 	app.Version = fmt.Sprintf("%s/%s", baseVersion, machineID)
-	app.Usage = "This is the entry point for starting a new MultiversX keys monitor"
+	app.Usage = "This is the entry point for starting a new Dharitri keys monitor"
 	app.Flags = []cli.Flag{
 		configurationFile,
 		credentialsFile,
@@ -79,8 +79,8 @@ func main() {
 	}
 	app.Authors = []cli.Author{
 		{
-			Name:  "The MultiversX Team",
-			Email: "contact@multiversx.com",
+			Name:  "The Dharitri Team",
+			Email: "contact@dharitri.org",
 		},
 	}
 

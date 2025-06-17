@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/config"
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors"
-	"github.com/multiversx/mx-chain-keys-monitor-go/factory"
-	"github.com/multiversx/mx-chain-keys-monitor-go/mock"
-	logger "github.com/multiversx/mx-chain-logger-go"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/config"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/factory"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/mock"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

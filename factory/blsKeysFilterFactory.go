@@ -3,9 +3,9 @@ package factory
 import (
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/config"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors/disabled"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/config"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors/disabled"
 )
 
 // NewBLSKeysFilter creates a new instance of type BLSKeysFilter

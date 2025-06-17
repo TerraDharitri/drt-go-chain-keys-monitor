@@ -3,7 +3,7 @@ package executors
 import (
 	"context"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 // RatingsChecker defines the operation of a component able to check the ratings

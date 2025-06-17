@@ -1,9 +1,9 @@
 services:
-  mx-chain-keys-monitor-go:
-    image: multiversx/keysmonitor:latest
-    container_name: mx-chain-keys-monitor-go
+  drt-go-chain-keys-monitor:
+    image: terradharitri/keysmonitor:latest
+    container_name: drt-go-chain-keys-monitor
     volumes:
-      - ./cmd/monitor/config/:/home/mx/config:ro
+      - ./cmd/monitor/config/:/home/drt/config:ro
     restart: unless-stopped
     command:
       - '-log-level=*:DEBUG'

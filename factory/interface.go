@@ -3,7 +3,7 @@ package factory
 import (
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 // FileLoggingHandler will handle log file rotation

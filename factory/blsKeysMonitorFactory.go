@@ -3,13 +3,13 @@ package factory
 import (
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/checkers"
-	"github.com/multiversx/mx-chain-keys-monitor-go/config"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors"
-	"github.com/multiversx/mx-chain-keys-monitor-go/interactors"
-	"github.com/multiversx/mx-chain-keys-monitor-go/monitor"
-	"github.com/multiversx/mx-chain-keys-monitor-go/parsers"
-	"github.com/multiversx/mx-sdk-go/core/http"
+	"github.com/TerraDharitri/drt-go-sdk/core/http"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/checkers"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/config"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/interactors"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/monitor"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/parsers"
 )
 
 const timeBetweenBLSKeysFetch = time.Second

@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/config"
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors"
-	"github.com/multiversx/mx-chain-keys-monitor-go/executors/disabled"
-	"github.com/multiversx/mx-sdk-go/core/polling"
+	"github.com/TerraDharitri/drt-go-sdk/core/polling"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/config"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/executors/disabled"
 )
 
 const unknownWeekDay = -2

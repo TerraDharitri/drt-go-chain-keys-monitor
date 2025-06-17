@@ -1,18 +1,18 @@
 
 # Monitor CLI
 
-The **MultiversX Keys Monitor** exposes the following Command Line Interface:
+The **Dharitri Keys Monitor** exposes the following Command Line Interface:
 
 ```
 $ node --help
 
 NAME:
-   MultiversX keys monitor tool - This is the entry point for starting a new MultiversX keys monitor
+   Dharitri keys monitor tool - This is the entry point for starting a new Dharitri keys monitor
 USAGE:
    monitor [global options]
    
 AUTHOR:
-   The MultiversX Team <contact@multiversx.com>
+   The Dharitri Team <contact@dharitri.org>
    
 GLOBAL OPTIONS:
    --config value        The main configuration file (default: "./config/config.toml")

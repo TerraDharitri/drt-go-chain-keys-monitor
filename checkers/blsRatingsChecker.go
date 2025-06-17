@@ -3,8 +3,8 @@ package checkers
 import (
 	"fmt"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
-	logger "github.com/multiversx/mx-chain-logger-go"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
 )
 
 const minAlarmDeltaRatingDrop = float64(0.0)

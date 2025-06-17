@@ -6,7 +6,7 @@ import (
 	"html/template"
 	"net/smtp"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 const mimeHeaders = "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\n\n"

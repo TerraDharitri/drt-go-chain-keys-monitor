@@ -1,9 +1,9 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/multiversx/mx-chain-keys-monitor-go)](https://goreportcard.com/report/github.com/multiversx/mx-chain-keys-monitor-go)
-[![Codecov](https://codecov.io/gh/multiversx/mx-chain-keys-monitor-go/branch/main/graph/badge.svg)](https://codecov.io/gh/multiversx/mx-chain-keys-monitor-go)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/multiversx/mx-chain-keys-monitor-go)](https://github.com/multiversx/mx-chain-keys-monitor-go/releases)
-[![GitHub](https://img.shields.io/github/license/multiversx/mx-chain-keys-monitor-go)](LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/TerraDharitri/drt-go-chain-keys-monitor)](https://goreportcard.com/report/github.com/TerraDharitri/drt-go-chain-keys-monitor)
+[![Codecov](https://codecov.io/gh/TerraDharitri/drt-go-chain-keys-monitor/branch/main/graph/badge.svg)](https://codecov.io/gh/TerraDharitri/drt-go-chain-keys-monitor)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TerraDharitri/drt-go-chain-keys-monitor)](https://github.com/TerraDharitri/drt-go-chain-keys-monitor/releases)
+[![GitHub](https://img.shields.io/github/license/TerraDharitri/drt-go-chain-keys-monitor)](LICENSE)
 
-# MultiversX keys monitor
+# Dharitri keys monitor
 
 This tool allows the monitoring of BLS keys that can participate into the consensus, regardless of the shard they are currently operating in.
 This is done by continuously polling the `/validator/statistics` API endpoint route. 
@@ -69,8 +69,8 @@ You need to have [Docker](https://docs.docker.com/engine/install/) installed on 
 Copy the template configs from the `example` directory:
 ```bash
 cd
-git clone https://github.com/multiversx/mx-chain-keys-monitor-go
-cd mx-chain-keys-monitor-go
+git clone https://github.com/TerraDharitri/drt-go-chain-keys-monitor
+cd drt-go-chain-keys-monitor
 cp ./cmd/monitor/config/example/* ./cmd/monitor/config
 ```
 
@@ -82,7 +82,7 @@ Customize your config files from the `./cmd/monitor/config` directory:
 
 Fetch the image & start it, using the docker-compose.yml file:
 ```bash
-sudo docker compose -f ./docker-compose.yml up -d mx-chain-keys-monitor-go
+sudo docker compose -f ./docker-compose.yml up -d drt-go-chain-keys-monitor
 ```
 
 You're ready 🚀
@@ -93,10 +93,10 @@ You're ready 🚀
 
 ```bash
 cd
-git clone https://github.com/multiversx/mx-chain-keys-monitor-go
-cd ~/mx-chain-keys-monitor-go/scripts
-# the following init call will create ~/mx-chain-keys-monitor-go/scripts/config/local.cfg file
-# and will copy the configs from ~/mx-chain-keys-monitor-go/cmd/monitor/config/example to ~/mx-chain-keys-monitor-go/cmd/monitor/config
+git clone https://github.com/TerraDharitri/drt-go-chain-keys-monitor
+cd ~/drt-go-chain-keys-monitor/scripts
+# the following init call will create ~/drt-go-chain-keys-monitor/scripts/config/local.cfg file
+# and will copy the configs from ~/drt-go-chain-keys-monitor/cmd/monitor/config/example to ~/drt-go-chain-keys-monitor/cmd/monitor/config
 # to avoid github pull problems
 ./script.sh init
 cd config
@@ -137,7 +137,7 @@ the application. If left empty, the upgrade process will automatically fetch and
 
 After the `local.cfg` configuration step, the scripts can now install the application.
 ```bash
-cd ~/mx-chain-keys-monitor-go/scripts
+cd ~/drt-go-chain-keys-monitor/scripts
 ./script.sh install
 ```
 
@@ -145,7 +145,7 @@ cd ~/mx-chain-keys-monitor-go/scripts
 
 After the application has been installed, it is now time to configure it.
 For this, you should edit the `config.toml` and `credentials.toml` files and add files containing lists of BLS keys or addresses in the 
-`~/mx-chain-keys-monitor-go/cmd/monitor/config` directory.
+`~/drt-go-chain-keys-monitor/cmd/monitor/config` directory.
 
 The scripts init step already created some initial .toml and .list files to be ready to be used directly.
 
@@ -240,13 +240,13 @@ reduce the number of false positive alarms due to the nature of the other nodes 
 
   - The `Name` defines a string for the monitored network. Can be something like `Mainnet`, `Testnet`, `Devnet` or any kind of identification string.
 
-  - The `ApiURL` defines the API url for that network. Examples here include `https://api.multiversx.com` for the mainnet, 
-`https://testnet-api.multiversx.com` for the testnet, and `https://devnet-api.multiversx.com` for the devnet.
+  - The `ApiURL` defines the API url for that network. Examples here include `https://api.dharitri.org` for the mainnet, 
+`https://testnet-api.dharitri.org` for the testnet, and `https://devnet-api.dharitri.org` for the devnet.
 
   - The `ExplorerURL` is used whenever a BLS key alert message is emitted, to automatically include the link to that BLS key page.
 If left empty, the message will still be emitted, but it will not contain any link.
-Examples here include `https://explorer.multiversx.com` for the mainnet, 
-`https://testnet-explorer.multiversx.com` for the testnet, and `https://devnet-explorer.multiversx.com` for the devnet.
+Examples here include `https://explorer.dharitri.org` for the mainnet, 
+`https://testnet-explorer.dharitri.org` for the testnet, and `https://devnet-explorer.dharitri.org` for the devnet.
 
   - The `PollingIntervalInSeconds` represents the time in seconds between the calls on the API URL. 
 
@@ -257,7 +257,7 @@ Examples here include `https://explorer.multiversx.com` for the mainnet,
 
 Before the application start, it is a good practice to test the configured notifiers
 ```bash
-cd ~/mx-chain-keys-monitor-go/scripts
+cd ~/drt-go-chain-keys-monitor/scripts
 ./script.sh test_notifiers
 ```
 
@@ -269,7 +269,7 @@ If all enabled notifiers are configured correctly, no error messages should appe
 
 After editing the required config files, the application can be started.
 ```bash
-cd ~/mx-chain-keys-monitor-go/scripts
+cd ~/drt-go-chain-keys-monitor/scripts
 ./script.sh start
 ```
 
@@ -281,7 +281,7 @@ issued by the `./script.sh stop` command.
 It is a good practice to save the .toml, .list and the local.cfg files somewhere else just in case the application is cleaned up accidentally.
 The upgrade call for the monitor app is done through this command:
 ```bash
-cd ~/mx-chain-keys-monitor-go/scripts
+cd ~/drt-go-chain-keys-monitor/scripts
 ./script.sh upgrade
 ```
 
@@ -289,7 +289,7 @@ cd ~/mx-chain-keys-monitor-go/scripts
 
 The application can be removed by executing the following script:
 ```bash
-cd ~/mx-chain-keys-monitor-go/scripts
+cd ~/drt-go-chain-keys-monitor/scripts
 ./script.sh cleanup
 ```
 
@@ -297,16 +297,16 @@ cd ~/mx-chain-keys-monitor-go/scripts
 
 If the application fails to start (maybe there is a bad config in the .toml files), the following command can be issued:
 ```bash
-sudo journalctl -f -u mx-chain-keys-monitor.service
+sudo journalctl -f -u drt-chain-keys-monitor.service
 ```
 
 Also, if the application misbehaves, the logs can be retrieved by using this command:
 ```bash
-cd ~/mx-chain-keys-monitor-go/scripts
+cd ~/drt-go-chain-keys-monitor/scripts
 ./script.sh get_logs
 ```
 
 If the application crashes, and you have followed the installation via Docker, the command to retrieve the logs is as follows:
 ```bash
-sudo docker logs -f mx-chain-keys-monitor-go
+sudo docker logs -f drt-go-chain-keys-monitor
 ```

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	logger "github.com/multiversx/mx-chain-logger-go"
-	"github.com/multiversx/mx-sdk-go/core/polling"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
+	"github.com/TerraDharitri/drt-go-sdk/core/polling"
 )
 
 const minInterval = time.Second

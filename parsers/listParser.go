@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/multiversx/mx-chain-core-go/core/pubkeyConverter"
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
+	"github.com/TerraDharitri/drt-go-chain-core/core/pubkeyConverter"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 )
 
 const commentMarker = "#"

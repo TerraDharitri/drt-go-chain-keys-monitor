@@ -3,7 +3,7 @@ package parsers
 import (
 	"testing"
 
-	"github.com/multiversx/mx-chain-keys-monitor-go/core"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -89,19 +89,19 @@ func TestListParser_ParseFile(t *testing.T) {
 		expectedAddresses := []core.Address{
 			{
 				Hex:    "c6762c7eb6edcb341d3e37f3e662363c98e6237b4245f567179661008d5160b0",
-				Bech32: "erd1cemzcl4kah9ng8f7xle7vc3k8jvwvgmmgfzl2echjesspr23vzcqdexyy9",
+				Bech32: "drt1cemzcl4kah9ng8f7xle7vc3k8jvwvgmmgfzl2echjesspr23vzcqs9388m",
 			},
 			{
 				Hex:    "102a8ba34fce6f9be3b83d159eaae3a1cb8cabd9e31c6d92bb21d940251a9df8",
-				Bech32: "erd1zq4ghg60eehehcac852ea2hr589ce27euvwxmy4my8v5qfg6nhuq99r9ez",
+				Bech32: "drt1zq4ghg60eehehcac852ea2hr589ce27euvwxmy4my8v5qfg6nhuqce5x6u",
 			},
 			{
 				Hex:    "0000000000000000000100000000000000000000000000000000000003ffffff",
-				Bech32: "erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqlllllskf06ky",
+				Bech32: "drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqlllllst4ce46",
 			},
 			{
 				Hex:    "0000000000000000000100000000000000000000000000000000000002ffffff",
-				Bech32: "erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqhllllsajxzat",
+				Bech32: "drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqhllllsqw3p74",
 			},
 		}
 		assert.Equal(t, expectedAddresses, result.Addresses)

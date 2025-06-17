@@ -8,7 +8,7 @@ generateForMonitor() {
     HELP="
 # Monitor CLI
 
-The **MultiversX Keys Monitor** exposes the following Command Line Interface:
+The **Dharitri Keys Monitor** exposes the following Command Line Interface:
 $(code)
 \$ node --help
 
