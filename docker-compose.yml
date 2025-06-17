@@ -1,0 +1,10 @@
+services:
+  mx-chain-keys-monitor-go:
+    image: multiversx/keysmonitor:latest
+    container_name: mx-chain-keys-monitor-go
+    volumes:
+      - ./cmd/monitor/config/:/home/mx/config:ro
+    restart: unless-stopped
+    command:
+      - '-log-level=*:DEBUG'
+      - '-log-save'
