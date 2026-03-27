@@ -1,0 +1,78 @@
+package notifiers
+
+import (
+	"fmt"
+	"strings"
+
+	"github.com/TerraDharitri/drt-go-chain-core/core/check"
+	logger "github.com/TerraDharitri/drt-go-chain-logger"
+	"github.com/TerraDharitri/drt-go-chain-keys-monitor/core"
+)
+
+type logNotifier struct {
+	log logger.Logger
+}
+
+// NewLogNotifier creates a new log notifier instance
+func NewLogNotifier(log logger.Logger) (*logNotifier, error) {
+	if check.IfNil(log) {
+		return nil, errNilLogger
+	}
+
+	return &logNotifier{
+		log: log,
+	}, nil
+}
+
+// OutputMessages will send the output messages to the current logger
+func (notifier *logNotifier) OutputMessages(messages ...core.OutputMessage) error {
+	for _, msg := range messages {
+		notifier.output(msg)
+	}
+
+	return nil
+}
+
+func (notifier *logNotifier) output(message core.OutputMessage) {
+	msg := composeMessage(message)
+
+	logLevel := logger.LogInfo
+	switch message.Type {
+	case core.ErrorMessageOutputType:
+		logLevel = logger.LogError
+	case core.WarningMessageOutputType:
+		logLevel = logger.LogWarning
+	}
+
+	notifier.log.Log(logLevel, msg)
+}
+
+func composeMessage(message core.OutputMessage) string {
+	stringBuilder := &strings.Builder{}
+	if len(message.IdentifierType) > 0 {
+		stringBuilder.WriteString(message.IdentifierType)
+		stringBuilder.WriteString(" ")
+	}
+	if len(message.Identifier) > 0 {
+		stringBuilder.WriteString(message.Identifier)
+		stringBuilder.WriteString(" ")
+	}
+	if len(message.ProblemEncountered) > 0 {
+		stringBuilder.WriteString("-> ")
+		stringBuilder.WriteString(message.ProblemEncountered)
+		stringBuilder.WriteString(" ")
+	}
+	fmt.Fprintf(stringBuilder, "called by %s", message.ExecutorName)
+
+	return stringBuilder.String()
+}
+
+// Name returns the name of the notifier
+func (notifier *logNotifier) Name() string {
+	return fmt.Sprintf("%T", notifier)
+}
+
+// IsInterfaceNil returns true if there is no value under the interface
+func (notifier *logNotifier) IsInterfaceNil() bool {
+	return notifier == nil
+}

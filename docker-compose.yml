@@ -1,0 +1,10 @@
+services:
+  drt-go-chain-keys-monitor:
+    image: terradharitri/keysmonitor:latest
+    container_name: drt-go-chain-keys-monitor
+    volumes:
+      - ./cmd/monitor/config/:/home/drt/config:ro
+    restart: unless-stopped
+    command:
+      - '-log-level=*:DEBUG'
+      - '-log-save'
