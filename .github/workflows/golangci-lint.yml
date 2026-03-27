@@ -13,6 +13,8 @@ jobs:
   golangci:
     name: golangci linter
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -22,5 +24,5 @@ jobs:
         uses: golangci/golangci-lint-action@v7
         with:
           version: v2.11.4
-          args: --timeout 10m0s --max-issues-per-linter 0 --max-same-issues 0 --print-issued-lines
+          args: --timeout 10m0s --max-issues-per-linter 0 --max-same-issues 0
           only-new-issues: true
